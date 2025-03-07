@@ -3,23 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vu Art - Home</title>
+    <title>Vu Art - Beranda</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="home-container">
-        <h1>Selamat Datang di Vu Art</h1>
-        <div class="menu">
-            <a href="gallery.html">Lihat Gambar</a>
-            <a href="about.html">Tentang Pemilik</a>
-            <button onclick="logout()">Logout</button>
-        </div>
+        <h2>Selamat Datang di Vu Art</h2>
+        <a href="gallery.html" class="btn">Lihat Gambar</a>
+        <a href="about.html" class="btn">Tentang Pemilik</a>
+        <button onclick="logout()">Logout</button>
     </div>
-    
-    <script>
-        function logout() {
-            window.location.href = "index.html";
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
