@@ -32,15 +32,35 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("uploadInput").addEventListener("change", function(event) {
             const file = event.target.files[0];
             if (file) {
-                const img = document.createElement("img");
-                img.src = URL.createObjectURL(file);
-                img.style.width = "100px";
-                img.style.margin = "10px";
-                document.getElementById("gallery").appendChild(img);
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const storedImages = JSON.parse(localStorage.getItem("images")) || [];
+                    storedImages.push(e.target.result);
+                    localStorage.setItem("images", JSON.stringify(storedImages));
+                    displayImages();
+                };
+                reader.readAsDataURL(file);
             }
         });
+
+        displayImages();
     }
 });
+
+function displayImages() {
+    const gallery = document.getElementById("gallery");
+    if (gallery) {
+        gallery.innerHTML = "";
+        const storedImages = JSON.parse(localStorage.getItem("images")) || [];
+        storedImages.forEach((src) => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.style.width = "100px";
+            img.style.margin = "10px";
+            gallery.appendChild(img);
+        });
+    }
+}
 
 function logout() {
     localStorage.clear();
