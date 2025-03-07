@@ -8,9 +8,12 @@
 </head>
 <body>
     <div class="gallery-container">
-        <h1>Galeri Gambar</h1>
-        <p>(Di sini akan ada gambar-gambar digital)</p>
-        <a href="home.html">Kembali</a>
+        <h2>Galeri Gambar</h2>
+        <input type="file" id="uploadInput" accept="image/*" style="display: none;">
+        <button id="uploadBtn">Upload Gambar</button>
+        <div id="gallery"></div>
+        <button onclick="logout()">Logout</button>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
