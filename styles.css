@@ -1,53 +1,49 @@
-/* Reset */
-* {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-/* Body */
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-}
-
-/* Container */
 .login-container, .home-container, .gallery-container, .about-container {
+    max-width: 400px;
+    margin: 50px auto;
     background: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Input & Button */
-input, button, a {
-    display: block;
+h2 {
+    color: #333;
+}
+
+input, button {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    border: none;
-}
-
-input {
     border: 1px solid #ccc;
 }
 
 button {
-    background: #333;
+    background-color: #5c67f2;
     color: white;
+    border: none;
     cursor: pointer;
 }
 
-a {
-    background: #007bff;
+button:hover {
+    background-color: #4a54e1;
+}
+
+.btn {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #5c67f2;
     color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
